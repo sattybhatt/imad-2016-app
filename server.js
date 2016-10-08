@@ -8,7 +8,12 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
+var ob={
+    title:"Article-one",
+    heading:"Article-one",
+    date:"5 sept 2016",
+    content:""
+}
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
