@@ -12,7 +12,19 @@ var ob={
     title:"Article-one",
     heading:"Article-one",
     date:"5 sept 2016",
-    content:""
+    content:`       <div class="container">
+                    <h3>Artivle-one</h3>
+                    <div>5 sept 2016</div>
+                    <div>
+                      <p>Let's see how this life rolls</p>
+                         <p>Let's see how this life rolls</p>
+                         <p>Let's see how this life rolls</p>
+                         <p>Let's see how this life rolls</p>
+                             <p>Let's see how this life rolls</p>
+                            <p>Let's see how this life rolls</p>
+                            <p>Let's see how this life rolls</p>
+                            </div>
+                             </div>`
 }
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
