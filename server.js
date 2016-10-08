@@ -26,31 +26,25 @@ var ob={
                             </div>
                              </div>`
 }
-var htmltemplate={`<!DOCTYPE html>
-<html>
-<head>
-    <title>Article-one</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <div> <a href="/">Home</a></div>
-        <hr>
-        <div class="container">
-        <h3>Artivle-one</h3>
-        <div>5 sept 2016</div>
-        <div>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-            <p>Let's see how this life rolls</p>
-        </div>
-        </div>
-    </body>
-</html>`}
+var htmltemplate={`
+                <html>
+                <head>
+                 <title> ${title}</title>
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">
+                <link rel="stylesheet" type="text/css" href="style.css">
+                </head>
+                <body>
+               <div> <a href="/">Home</a></div>
+                  <hr>
+                <div class="container">
+                <h3>Artivle-one</h3>
+                <div>${heading}</div>
+                <div>
+                   ${content}
+                </div>
+                </div>
+                </body>
+                </html>`}
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
