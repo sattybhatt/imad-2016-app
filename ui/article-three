@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Article-three</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <body>
+        <div> <a href="/">Home</a></div>
+        <hr>
+        <h3>Article-three</h3>
+        <div>5 sept 2016</div>
+        <div>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+            <p>Let's see how this life rolls</p>
+        </div>
+    </body>
+</html>
