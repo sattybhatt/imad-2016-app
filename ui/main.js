@@ -1,6 +1,7 @@
-var cnt=document.getElementById('click');
+var cnter=document.getElementById('click');
 var counter=0;
-cnt.onclick=function(){
+cnter.onclick=function(){
+    console.log(counter)
     counter=counter+1;
    var cnt2=document.getElementsByClassName('cnt');
    cnt2.innerHTML=counter.toString();
