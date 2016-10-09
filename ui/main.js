@@ -15,7 +15,7 @@ request.onreadystatechange=function()
          cnt2[0].innerHTML=counter.toString();
          }
     }
-    request.open('GET','http://sattybhatt.imad.hasura-app.io/counter',true);
+     request.open('GET','http://sattybhatt.imad.hasura-app.io/counter',true);
     request.send(null);
 };
 }
