@@ -1,7 +1,6 @@
 var cnter=document.getElementById('click');
 var counter=0;
 cnter.onclick=function(){
-    console.log('hello');
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
@@ -10,7 +9,8 @@ request.onreadystatechange=function()
     {
          if(request.status==200)
          {
-          var counter=request.responsetext();
+             console.log(request.responseText());
+          var counter=request.responseText();
           var cnt2=document.getElementsByClassName('cnt');
          cnt2[0].innerHTML=counter.toString();
          }
