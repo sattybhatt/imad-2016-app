@@ -3,5 +3,5 @@ var counter=0;
 cnt.onclick=function(){
     counter=counter+1;
    var cnt2=document.getElementById('cnt');
-   cnt2.innerHTML(cnt2);
+   cnt2.innerHTML(counter);
 };
