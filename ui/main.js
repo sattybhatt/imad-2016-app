@@ -4,13 +4,12 @@ cnter.onclick=function(){
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
-    console.log(request.status);
     if(request.readyState==XMLHttpRequest.DONE)
     {
          if(request.status==200)
          {
-             console.log(request.responseText());
-          var counter=request.responseText();
+             console.log(request.responseText);
+          var counter=request.responseText;
           var cnt2=document.getElementsByClassName('cnt');
          cnt2[0].innerHTML=counter.toString();
          }
