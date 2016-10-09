@@ -1,6 +1,7 @@
 var cnter=document.getElementById('click');
 var counter=0;
 cnter.onclick=function(){
+    console.log('hello');
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
