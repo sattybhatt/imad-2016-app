@@ -13,7 +13,7 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-/*var ob={
+var ob={
     title:"Article-one",
     heading:"Article-one",
     date:"5 sept 2016",
@@ -31,30 +31,32 @@ app.get('/counter',function(req,res){
                             </div>
                              </div>`
 }
-var htmltemplate={`
-                <html>
+function hello(ob1)
+ {
+     var title=ob1.title;
+var htmltemplate= `<html>
                 <head>
-                 <title> ${title}</title>
+                 <title>${title}</title>
                 <meta name="viewport" content="width=device-width,initial-scale=1.0">
                 <link rel="stylesheet" type="text/css" href="style.css">
                 </head>
                 <body>
-               <div> <a href="/">Home</a></div>
+               <div><a href="/">Home</a></div>
                   <hr>
                 <div class="container">
                 <h3>Artivle-one</h3>
-                <div>${heading}</div>
-                <div>
-                   ${content}
-                </div>
+                <div>`+ob1.heading+`</div>
+                <div>`+ob1.content+`</div>
                 </div>
                 </body>
-                </html>`} */
+                </html>`; 
+                return htmltemplate;
+}
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/article-one',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send('hello(ob)');
 });
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
