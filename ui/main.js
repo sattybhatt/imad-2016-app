@@ -14,10 +14,18 @@ request.onreadystatechange=function()
          cnt2[0].innerHTML=counter.toString();
          }
     }
-}
+};
      request.open('GET','http://sattybhatt.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+var z=document.getElementsByClassName('img-medium');
+z[0].onclick=function(){
+    hello1();
+};
+function hello1(){
+    z[0].style.marginLeft+='10px';
+}
+setInterval(hello1,2000);
 /*cnter.onclick=function(){
     console.log(counter);
     counter=counter+1;
