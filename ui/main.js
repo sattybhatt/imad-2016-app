@@ -25,8 +25,9 @@ z[0].onclick=function(){
 function hello1(){  
     
     console.log('hello');
-    z[0].style.marginLeft +='10px';
-    setInterval(hello1,2000);
+    marginLeft =marginLeft+10;
+    z[0].style.marginLeft=marginLeft+'px';
+    setInterval(hello1,200);
 }
 /*cnter.onclick=function(){
     console.log(counter);
