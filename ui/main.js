@@ -22,7 +22,9 @@ var z=document.getElementsByClassName('img-medium');
 z[0].onclick=function(){
     hello1();
 };
-function hello1(){
+function hello1(){  
+    
+    console.log('hello');
     z[0].style.marginLeft +='10px';
     setInterval(hello1,2000);
 }
