@@ -23,9 +23,9 @@ z[0].onclick=function(){
     hello1();
 };
 function hello1(){
-    z[0].style.marginLeft+='10px';
+    z[0].style.marginLeft +='10px';
+    setInterval(hello1,2000);
 }
-setInterval(hello1,2000);
 /*cnter.onclick=function(){
     console.log(counter);
     counter=counter+1;
