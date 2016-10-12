@@ -22,11 +22,11 @@ var z=document.getElementsByClassName('img-medium');
 z[0].onclick=function(){
     hello1();
 };
+var marginLefter=0;
 function hello1(){  
-    
     console.log('hello');
-    marginLeft =marginLeft+10;
-    z[0].style.marginLeft=marginLeft+'px';
+    marginLefter =marginLefter+10;
+    z[0].style.marginLeft=marginLefter+'px';
     setInterval(hello1,200);
 }
 /*cnter.onclick=function(){
