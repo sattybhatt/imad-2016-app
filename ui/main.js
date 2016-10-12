@@ -21,6 +21,7 @@ request.onreadystatechange=function()
 var z=document.getElementsByClassName('img-medium');
 z[0].onclick=function(){
     hello1();
+    setInterval(hello1,2000);
 };
 var marginLefter=0;
 function hello1(){  
@@ -28,7 +29,6 @@ function hello1(){
     marginLefter =marginLefter+2;
     z[0].style.marginLeft=marginLefter+'px';
 }
-    setInterval(hello1,2000);
 /*cnter.onclick=function(){
     console.log(counter);
     counter=counter+1;
