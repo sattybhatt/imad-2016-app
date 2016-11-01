@@ -66,19 +66,19 @@ app.get('/ui/main.js',function(req,res){
 });
 app.get('/articles/:articleName',function(req,res){
    var articleName = req.params.articleName;
-   pool.query("SELECT * from article WHERE title='"+req.params.articleName+"'",function(err,res){
+   pool.query("SELECT * from article WHERE title = '"+req.params.articleName+"'",function(err,result){
       // console.log(res);
-   /*if(err){
+   if(err){
        res.status(500).send(err.toString());
-   } */
-  /* else{
-       if(res.rows.length===0){
+   } 
+   else{
+       if(result.rows.length===0){
          res.status(400).send('Article not found');  
        }else{
         var articleData=res.rows[0];
          res.send(hello(articleData));
        }
-   } */
+   } 
    });
 });
 app.get('/article-two',function(req,res){
