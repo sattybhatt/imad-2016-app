@@ -56,6 +56,7 @@ var ob={
 }
 function hello(ob1)
  {
+    
      var title=ob1.title;
 var htmltemplate= `<html>
                 <head>
@@ -83,6 +84,22 @@ app.get('/article-one',function(req,res){
 });
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+app.get('/articles/:articleName',function(req,res){
+   var articleName=req.params.articleName;
+   pool.query("SELECT * from article WHERE title="+articleName,function(err,res){
+   if(err){
+       res.status(500).send(err.toString());
+   }
+   else{
+       if(res.rows.length===0){
+         res.status(400).send('Article not found');  
+       }else{
+        var articleData=res.rows[0];
+         res.send(hello(articleData));
+       }
+   }
+   });
 });
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
