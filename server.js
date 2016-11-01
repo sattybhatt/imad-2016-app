@@ -100,7 +100,7 @@ app.get('/articles/:articleName',function(req,res){
          res.send(hello(articleData));
        }
    } */
-   });
+   })
 });
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
