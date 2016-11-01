@@ -88,19 +88,8 @@ app.get('/ui/main.js',function(req,res){
 app.get('/articles/:articleName',function(req,res){
    var articleName=req.params.articleName;
    pool.query("SELECT * from article WHERE title='"+articleName+"'",function(err,res){
-       console.log(res);
-   /*if(err){
-       res.status(500).send(err.toString());
-   } */
-  /* else{
-       if(res.rows.length===0){
-         res.status(400).send('Article not found');  
-       }else{
-        var articleData=res.rows[0];
-         res.send(hello(articleData));
-       }
-   } */
-   })
+      // console.log(res);
+   });
 });
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
