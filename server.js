@@ -53,7 +53,7 @@ var ob={
                             <p>Let's see how this life rolls</p>
                             </div>
                              </div>`
-}
+};
 function hello(ob1)
  {
     
@@ -89,17 +89,17 @@ app.get('/articles/:articleName',function(req,res){
    var articleName=req.params.articleName;
    pool.query("SELECT * from article WHERE title='"+articleName+"'",function(err,res){
        console.log(res);
-   if(err){
+   /*if(err){
        res.status(500).send(err.toString());
-   }
-   else{
+   } */
+  /* else{
        if(res.rows.length===0){
          res.status(400).send('Article not found');  
        }else{
         var articleData=res.rows[0];
          res.send(hello(articleData));
        }
-   }
+   } */
    });
 });
 app.get('/article-two',function(req,res){
