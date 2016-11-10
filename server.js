@@ -160,7 +160,7 @@ function makecontent(ob1){
     var image=ob1.image;
     var content=ob1.content;
     var date=ob1.date;
-    var template='<html><head><title>'+title+'</title></head><body><div>Date:'+date+'</div><div><img src='+image+'>';
+    var template='<html><head><title>'+title+'</title></head><body><div>Date:'+date.toString()+'</div><div><img src='+image+'>';
     template +='</div><div>'+title+'</div><div>'+content+'</div></body></html>';
     return template;
 }
