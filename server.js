@@ -134,6 +134,26 @@ if(m===0){
    return htmltemplate;
 }
 //end here
+///blog page
+app.get('/blog/:blogName',function(req,res){
+   var blogName = req.params.blogName;
+   pool.query("SELECT * from article WHERE title = '"+req.params.blogName+"'",function(err,result){
+      // console.log(res);
+   if(err){
+       res.status(500).send(err.toString());
+   } 
+   else{
+       if(result.rows.length===0){
+         res.status(400).send('Article not found');  
+       }else{
+        var articleData=result.rows[0];
+         res.send(articleData);
+       }
+   } 
+   });
+}); 
+
+//end here
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
