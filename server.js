@@ -147,12 +147,23 @@ app.get('/blog/:blogName',function(req,res){
          res.status(400).send('Article not found');  
        }else{
         var articleData=result.rows[0];
-         res.send(articleData);
+         res.send(makecontent(articleData));
        }
    } 
    });
 }); 
 
+//end here
+//function makecontent
+function makecontent(ob1){
+    var title=ob1.title;
+    var image=ob1.image;
+    var content=ob1.content;
+    var date=ob1.date;
+    var template='<html><head><title>'+title+'</title></head><body><div>Date:'+date+'</div><div><img src='+image+'>';
+    template +='</div><div>'+title+'</div><div>'+content+'</div></body></html>';
+    return template;
+}
 //end here
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
