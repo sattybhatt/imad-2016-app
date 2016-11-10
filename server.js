@@ -64,7 +64,7 @@ app.get('/article-one',function(req,res){
 app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
-app.get('/articles/:articleName',function(req,res){
+/*app.get('/articles/:articleName',function(req,res){
    var articleName = req.params.articleName;
    pool.query("SELECT * from article WHERE title = '"+req.params.articleName+"'",function(err,result){
       // console.log(res);
@@ -80,7 +80,7 @@ app.get('/articles/:articleName',function(req,res){
        }
    } 
    });
-});
+}); */
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
