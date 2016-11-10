@@ -84,7 +84,7 @@ app.get('/articles/:articleName',function(req,res){
 
 //twice attempt
 app.get('/blog1',function(req,res){
-   pool.query("SELECT * from article ORDER by time DESC",function(err,result){
+   pool.query("SELECT * from article",function(err,result){
    if(err){
        res.status(500).send(err.toString());
    } 
