@@ -108,16 +108,16 @@ function makepage(ob1)
 var htmltemplate= '<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
 	htmltemplate +='<div style="display: inline-block;">';
 if(m===0){	
-	htmltemplate +='<div class="half half1" style="background:url('+img+')"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half1" style="background:url('+img+');background-size: cover;"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
 	}
 	if(m==1){ 
-	htmltemplate +='<div class="half half2" style="background:url('+img+')"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half2" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
 	}
 	if(m==2){ 
-	htmltemplate +='<div class="half half3" style="background:url('+img+')"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half3" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
 	}
 	if(m==3){	
-	htmltemplate +='<div class="half half4" style="background:url('+img+')"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half4" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
 	}
 	htmltemplate +='</div><div class="below" style="margin-top:350px;"><span class="news">Latest news</span><ul>';
 	if(m>=4 &&m <=7){
