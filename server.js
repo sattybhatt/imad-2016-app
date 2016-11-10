@@ -109,22 +109,23 @@ function makepage(ob1)
  htmltemplate += '<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
 	htmltemplate +='<div style="display: inline-block;">';
 if(m===0){	
-	htmltemplate +='<div class="half half1" style="background:url('+img+');background-size: cover;"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half1" style="background:url('+img+');background-size: cover;"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></span></div>';
 	}
 	if(m==1){ 
-	htmltemplate +='<div class="half half2" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half2" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></span></div>';
 	}
 	if(m==2){ 
-	htmltemplate +='<div class="half half3" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half3" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></span></div>';
 	}
 	if(m==3){	
-	htmltemplate +='<div class="half half4" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
+	htmltemplate +='<div class="half half4" style="background:url('+img+');background-size: cover;"><span class="cover-title2"><a class="nw" href="blog/'+title+'">'+title+'</a></span></div>';
 	}
-	htmltemplate +='</div><div class="below" style="margin-top:350px;"><span class="news">Latest news</span><ul>';
+	if(m==4){htmltemplate +='</div><div class="below" style="margin-top:350px;"><span class="news">Latest news</span><ul>';}
 	if(m>=4 &&m <=7){
 	htmltemplate +='<li class="two"><div class="story" style="width:270px;height:221px;"><a href="#"><img src='+img+' width="270px" height="135px"></a>';
 	htmltemplate +='<h4 style="color:white;font-family: ARS Maquette,Helvetica Neue,Arial,sans-serif;">'+title+'</h4><span class="cre">Bryan clarks-13hrs ago</span></div></li>';}
-	htmltemplate +='</ul></div><div class="river-flow"><ul class="river">';
+	if(m==8){
+	htmltemplate +='</ul></div><div class="river-flow"><ul class="river">';}
 	if(m>7){
 	htmltemplate +='<li class="lis"><div class="tags"><a href="#" class="tag">Apps</a></div><div class="block-content" style="margin-top:25px;position:absolute;">';
 	htmltemplate +='<h2 style="color:#F42">'+title+'</h2><span class="image"><a href="#"><img src='+img+' width="200px" height="150px" style="margin-left:820px;position:absolute;"></a></span>Read more</div></li>';
