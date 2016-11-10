@@ -105,7 +105,7 @@ function makepage(ob1)
 	var title=ob1[m].title;
 	var img=ob1[m].image;
 	
-var htmltemplate= '<html><head><link rel="stylesheet" type="text/css" href="ui/blog1.css"><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
+var htmltemplate= '<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
 	htmltemplate +='<div style="display: inline-block;">';
 if(m===0){	
 	htmltemplate +='<div class="half half1" style="background:url('+img+')"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
