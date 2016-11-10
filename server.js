@@ -134,6 +134,9 @@ if(m===0){
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 });
+app.get('/ui/blog1.css',function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'blog1.css'));
+});
 app.get('/article-three',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
