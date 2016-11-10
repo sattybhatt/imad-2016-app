@@ -101,11 +101,12 @@ app.get('/blog1',function(req,res){
 //function makepage
 function makepage(ob1)
  {
+     var htmltemplate="";
     for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
 	var img=ob1[m].image;
 	
-var htmltemplate= '<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
+ htmltemplate += '<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body>';
 	htmltemplate +='<div style="display: inline-block;">';
 if(m===0){	
 	htmltemplate +='<div class="half half1" style="background:url('+img+');background-size: cover;"><div class="gradient"></div><span class="cover-title"><a class="nw" href="blog/'+title+'">'+title+'</a></h2></div>';
@@ -128,8 +129,9 @@ if(m===0){
 	htmltemplate +='<li class="lis"><div class="tags"><a href="#" class="tag">Apps</a></div><div class="block-content" style="margin-top:25px;position:absolute;">';
 	htmltemplate +='<h2 style="color:#F42">'+title+'</h2><span class="image"><a href="#"><img src='+img+' width="200px" height="150px" style="margin-left:820px;position:absolute;"></a></span>Read more</div></li>';
 	htmltemplate +='</div></body></html>'; }
-     return htmltemplate;
-}}
+   }
+   return htmltemplate;
+}
 //end here
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
