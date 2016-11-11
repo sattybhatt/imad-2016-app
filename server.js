@@ -16,12 +16,12 @@ app.get('/counter',function(req,res){
 //hashing unit
 app.get('/hash/:input',function(req,res){
     var tc=req.params.input;
-    var tc2=hash(tc,salt);
+    var tc2=hash(tc,'random-string');
     res.send(tc2);
 });
 function hash(inputstring,salt)
 {
-    var hashed=crypto.pbkdf2(inputstring, 'random-string', 100000, 512, 'sha512');
+    var hashed=crypto.pbkdf2(inputstring,salt, 100000, 512, 'sha512');
     return hashed.toString('hex');
 }
 //end here
