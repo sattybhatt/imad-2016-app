@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var crypto = require('crypto');
 var app = express();
 app.use(morgan('combined'));
 
@@ -13,6 +13,18 @@ app.get('/counter',function(req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+//hashing unit
+app.get('/hash/:input',function(req,res){
+    var tc=req.params.input;
+    var tc2=hash(tc,salt);
+    res.send(tc2);
+});
+function hash(inputstring,salt)
+{
+    var hashed=crypto.pbkdf2(inputstring, 'random-string', 100000, 512, 'sha512');
+    return hashed.toString('hex');
+}
+//end here
 //db connection
 var Pool = require('pg').Pool;
 var config = {
