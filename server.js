@@ -72,9 +72,10 @@ app.post('/login',function(req,res){
              res.send('USERNAME OR PASSWORD IS INVALID');
          }
          else{
-             var hashedpassword=hash(password,'random-string');
              var dbstring=result.rows[0].password;
-             if(hashedpassword==dbstring){
+             var salt=dbstring.split('$')[2];
+             var hashedpassword=hash(password,salt);
+             if(hashedpassword===dbstring){
                  res.send("USER IS CORRECT");
              }
              }
