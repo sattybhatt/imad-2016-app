@@ -55,8 +55,8 @@ request.onreadystatechange=function()
 };
 var username2=document.getElementById('usrnm').value;
 var password2=document.getElementById('password').value;
-console.log(username);
-console.log(password);
+console.log(username2);
+console.log(password2);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/create-user',true);
      request.setRequestHeader('Content-type','application/json');
      request.send(JSON.stringify({username:username2,password:password2}));
