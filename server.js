@@ -21,7 +21,7 @@ app.get('/hash/:input',function(req,res){
 });
 function hash(inputstring,salt)
 {
-    var hashed=crypto.pbkdf2(inputstring,salt, 100000, 512, 'sha512');
+    var hashed=crypto.pbkdf2Sync(inputstring,salt, 100000, 512, 'sha512');
     return hashed.toString('hex');
 }
 //end here
