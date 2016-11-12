@@ -86,8 +86,8 @@ request.onreadystatechange=function()
          }
     }
 };
-var username=document.getElementById('rusername');
-var password=document.getElementById('rpassword');
+var username=document.getElementById('rusername').value;
+var password=document.getElementById('rpassword').value;
 console.log(username);
 console.log(password);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/login',true);
