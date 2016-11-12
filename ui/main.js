@@ -59,5 +59,5 @@ console.log(username);
 console.log(password);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/create-user',true);
      request.setRequestHeader('Content-type','application/json');
-    request.send(JSON.stringify({username:username,password:password}));
+     request.send(JSON.stringify({username:username,password:password}));
 };
