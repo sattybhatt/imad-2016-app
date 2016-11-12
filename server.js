@@ -93,7 +93,7 @@ app.get('/check-login',function(req,res)
 {
     if(req.session&&req.session.auth&&req.session.auth.userid)
     {
-        res.send('You are logged in:');
+        res.send('You are logged in:'+req.session.auth.userid.toString());
     }
 });
 //end here
