@@ -29,9 +29,4 @@ function hello1(){
     marginLefter =marginLefter+2;
     z[0].style.marginLeft=marginLefter+'px';
 }
-/*cnter.onclick=function(){
-    console.log(counter);
-    counter=counter+1;
-   var cnt2=document.getElementsByClassName('cnt');
-   cnt2[0].innerHTML=counter.toString();
-}; */
+//code for registering user
