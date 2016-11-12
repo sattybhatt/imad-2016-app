@@ -91,9 +91,12 @@ app.post('/login',function(req,res){
 //check login
 app.get('/check-login',function(req,res)
 {
-    if(req.session&&req.session.auth&&req.session.auth.userid)
+    if(req.session && req.session.auth && req.session.auth.userid)
     {
         res.send('You are logged in:'+req.session.auth.userid.toString());
+    }
+    else{
+     res.send('Not logged in');   
     }
 });
 //end here
