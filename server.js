@@ -47,7 +47,7 @@ app.get('/test-db',function(req,res){
     });
 });
 //create user
-app.post('/create user',function(req,res){
+app.post('/create-user',function(req,res){
     var username=req.body.username;
     var password=req.body.password;
     var salt=crypto.getRandomBytes(128).toString('hex');
