@@ -129,7 +129,7 @@ app.get('/blog1',function(req,res){
 //function makepage
 function makepage(ob1)
  {
-     var htmltemplate='<html><head><link href="/ui/blog1.css" rel="stylesheet" /><script type="text/javascript" src="/ui/main.js"></script><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><div style="width:100%;height:150px;"><input type="text" placeholder="username" name="usrnm" id="usrnm"><input type="password" name="password" id="password"><input type="submit" id="submitbutton" name="submit" value="submit"></div>';
+     var htmltemplate='<html><head><link href="/ui/blog1.css" rel="stylesheet" /><title>Blogs</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><div style="width:100%;height:150px;"><input type="text" placeholder="username" name="usrnm" id="usrnm"><input type="password" name="password" id="password"><input type="submit" id="submitbutton" name="submit" value="submit"></div>';
     for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
 	var img=ob1[m].image;
@@ -155,7 +155,7 @@ if(m===0){
 	if(m>7){
 	htmltemplate +='<li class="lis"><div class="tags"><a href="#" class="tag">Apps</a></div><div class="block-content" style="margin-top:25px;position:absolute;">';
 	htmltemplate +='<h2 style="color:#F42">'+title+'</h2><span class="image"><a href="#"><img src='+img+' width="200px" height="150px" style="margin-left:820px;position:absolute;"></a></span>Read more</div></li>';
-	htmltemplate +='</div></body></html>'; }
+	htmltemplate +='</div></body><script type="text/javascript" src="/ui/main.js"></script></html>'; }
    }
    return htmltemplate;
 }
