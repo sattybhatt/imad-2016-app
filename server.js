@@ -101,6 +101,13 @@ app.get('/check-login',function(req,res)
     }
 });
 //end here
+//logout
+app.get('/logout',function(req,res)
+{
+    delete req.session.auth.userid;
+    res.send('Logged out');
+});
+//end here
 function hello(ob1)
  {
     
