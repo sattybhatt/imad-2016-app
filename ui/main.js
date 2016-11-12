@@ -29,4 +29,34 @@ function hello1(){
     marginLefter =marginLefter+2;
     z[0].style.marginLeft=marginLefter+'px';
 }
-//code for registering user
+//code for registering user submit_btn
+var submit_btn=document.getElementById('submit_btn');
+submit_btn.onclick=function(){
+var request=new XMLHttpRequest();
+request.onreadystatechange=function()
+{
+    if(request.readyState==XMLHttpRequest.DONE)
+    {
+         if(request.status==200)
+         {
+             console.log(request.responseText);
+            alert('USer created');
+         }
+         else if(request.status==403)
+         {
+            alert('USername/password is incorrect');
+         }
+         else if(request.status==500)
+         {
+            alert('Something went wrong on server');
+         }
+    }
+};
+var username=document.getElementById('usrnm');
+var password=document.getElementById('password');
+console.log(username);
+console.log(password);
+     request.open('POST','http://sattybhatt.imad.hasura-app.io/create-user',true);
+     request.setRequestHeader('Content-type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
