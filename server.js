@@ -9,7 +9,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret:'randomvalue',
-    cookie:{maxAge:1000*60*60*24*30*1000}
+    cookie:{maxAge:1000*60*60*24*30*1000*5000}
 }));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
