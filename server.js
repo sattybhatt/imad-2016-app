@@ -2,10 +2,15 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
+var session=require('express-session');
 var app = express();
 var bodyParser=require('body-parser');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret:'randomvalue',
+    cookie:{maxAge:1000*60*60*24*30}
+}));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -76,12 +81,22 @@ app.post('/login',function(req,res){
              var salt=dbstring.split('$')[2];
              var hashedpassword=hash(password,salt);
              if(hashedpassword===dbstring){
+                 req.session.auth={userid:result.rows[0].id};
                  res.send("USER IS CORRECT");
              }
              }
          });
     });
 //end
+//check login
+app.get('/check-login',function(req,res)
+{
+    if(req.session&&req.session.auth&&req.session.auth.userid)
+    {
+        res.send('You are logged in');
+    }
+});
+//end here
 function hello(ob1)
  {
     
