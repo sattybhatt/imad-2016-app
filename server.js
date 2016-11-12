@@ -129,7 +129,7 @@ app.get('/blog1',function(req,res){
 //function makepage
 function makepage(ob1)
  {
-     var htmltemplate='<div style="width:100%;height:150px;"><input type="text" placeholder="username" name="usrnm" id="usrnm"><input type="password" name="password" id="password"></div>';
+     var htmltemplate='<div style="width:100%;height:150px;"><input type="text" placeholder="username" name="usrnm" id="usrnm"><input type="password" name="password" id="password"><input type="submit" name="submit" value="submit"></div>';
     for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
 	var img=ob1[m].image;
