@@ -130,6 +130,19 @@ var htmltemplate= `<html>
                 </html>`; 
                 return htmltemplate;
 }
+//comment add
+app.post('/comment',function(req,res){
+    var comment=req.body.comment;
+    var id=req.session.auth.userid;
+    pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[id,comment],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else{
+         res.send("Commented:",comment);
+       }
+    });
+});
+//end here
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
