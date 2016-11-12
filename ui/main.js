@@ -30,7 +30,7 @@ function hello1(){
     z[0].style.marginLeft=marginLefter+'px';
 } */
 //code for registering user submit_btn
-var submit_btn=document.getElementById('submit_btn');
+var submit_btn=document.getElementById('submitbutton');
 submit_btn.onclick=function(){
     console.log('hello submit button is clicked');
 var request=new XMLHttpRequest();
