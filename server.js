@@ -23,7 +23,7 @@ app.get('/hash/:input',function(req,res){
 function hash(inputstring,salt)
 {
     var hashed=crypto.pbkdf2Sync(inputstring,salt, 100000, 512, 'sha512');
-    return ['pbkdf2','10000',salt,hashed.toString('hex')].join($);
+    return ["pbkdf2","10000",salt,hashed.toString('hex')].join($);
 }
 //end here
 //db connection
