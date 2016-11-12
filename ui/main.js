@@ -61,3 +61,37 @@ console.log(password2);
      request.setRequestHeader('Content-type','application/json');
      request.send(JSON.stringify({username: username2,password: password2}));
 };
+//end here
+//code for login
+var submit_btn2=document.getElementById('rsubmitbutton');
+submit_btn2.onclick=function(){
+    console.log('hello submit button is clicked');
+var request=new XMLHttpRequest();
+request.onreadystatechange=function()
+{
+    if(request.readyState==XMLHttpRequest.DONE)
+    {
+         if(request.status==200)
+         {
+             console.log(request.responseText);
+            alert('USer is valid');
+         }
+         else if(request.status==403)
+         {
+            alert('USername/password is incorrect');
+         }
+         else if(request.status==500)
+         {
+            alert('Something went wrong on server');
+         }
+    }
+};
+var username=document.getElementById('rusername');
+var password=document.getElementById('rpassword');
+console.log(username);
+console.log(password);
+     request.open('POST','http://sattybhatt.imad.hasura-app.io/login',true);
+     request.setRequestHeader('Content-type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+};
+//end here
