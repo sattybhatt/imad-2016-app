@@ -1,4 +1,4 @@
-var cnter=document.getElementById('click');
+/*var cnter=document.getElementById('click');
 var counter=0;
 cnter.onclick=function(){
 var request=new XMLHttpRequest();
@@ -28,7 +28,7 @@ function hello1(){
     console.log('hello');
     marginLefter =marginLefter+2;
     z[0].style.marginLeft=marginLefter+'px';
-}
+} */
 //code for registering user submit_btn
 var submit_btn=document.getElementById('submit_btn');
 submit_btn.onclick=function(){
