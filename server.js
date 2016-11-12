@@ -23,7 +23,7 @@ app.get('/hash/:input',function(req,res){
 function hash(inputstring,salt)
 {
     var hashed=crypto.pbkdf2Sync(inputstring,salt, 100000, 512, 'sha512');
-    return hashed.toString('hex');
+    return ['pbkdf2','10000',salt,hashed.toString('hex')].join($);
 }
 //end here
 //db connection
@@ -73,8 +73,8 @@ app.post('/login',function(req,res){
          }
          else{
              var hashedpassword=hash(password,'random-string');
-             var dbString=result.rows[0].password;
-             if(hashedpassword==dbString){
+             var dbstring=result.rows[0].password;
+             if(hashedpassword==dbstring){
                  res.send("USER IS CORRECT");
              }
              }
