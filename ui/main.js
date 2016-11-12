@@ -53,8 +53,8 @@ request.onreadystatechange=function()
          }
     }
 };
-var username=document.getElementById('usrnm');
-var password=document.getElementById('password');
+var username=document.getElementById('usrnm').value;
+var password=document.getElementById('password').value;
 console.log(username);
 console.log(password);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/create-user',true);
