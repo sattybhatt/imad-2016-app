@@ -257,6 +257,9 @@ app.get('/article-two',function(req,res){
 app.get('/ui/blog1.css',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'blog1.css'));
 });
+app.get('/ui/main2.js',function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'main2.js'));
+});
 app.get('/article-three',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
