@@ -133,8 +133,9 @@ var htmltemplate= `<html>
 //comment add
 app.post('/comment',function(req,res){
     var comment=req.body.comment;
-    var id=req.session.auth.userid;
-    pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[id,comment],function(err,result){
+    var idc=req.session.auth.userid;
+    console.log(id);
+    pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[idc,comment],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
