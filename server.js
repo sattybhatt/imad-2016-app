@@ -12,7 +12,7 @@ app.use(session({
     cookie:{maxAge:1000*60*60*24*30}
 }));
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
 });
 var counter=0;
 app.get('/counter',function(req,res){
