@@ -260,7 +260,7 @@ function makecontent(ob1){
               ob2=result.rows;
              }
              })
-     template+='<!DOCTYPE html><html><head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"><link rel="stylesheet" type="text/css" src="blog3.css"><body>';
+    /* template+='<!DOCTYPE html><html><head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script><link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"><link rel="stylesheet" type="text/css" src="blog3.css"><body>';
     template +='<header><div style="width:650px; margin:auto; position: relative; height: 60px;"><div class="incenter" style=""><div style="display: inline-block;vertical-align: middle; height: 27px;"><img src='+image+' style="height: 100%;"></div><div style="display: inline-block;vertical-align: middle;font-weight: bold;color: white;font-size: 28px;font-family: open sans;text-shadow: 0px 0px 5px #5a5a5a;"><span style="color: #e83751;">#</span><span style="color: #2f9bc7;">S</span></div>/div><div></div></div></header>';
 	template +='<div style="position: relative; top:50px;"><div class="artcon"><div style="height:350px; width: 100%; overflow: hidden; background-position: center; background-size: cover; position: relative;background-image: url('+image+')"><div style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 80%,  rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.7) 100%); position: relative; height: 100%;"><div style="width: 650px;margin: auto;height: 100%;position: relative;"><div class="incenter" style="text-align: center; color: white; font-family: Open Sans, sans-serif; text-transform:uppercase; font-size: 40px; font-weight: 800;">'+title+'</div><div style="position: absolute; bottom: 0; left: 0px; width: 100%; padding:10px 20px; box-sizing: border-box;">';
 	for(var m=0;m<tags.length;i++)
@@ -282,7 +282,7 @@ function makecontent(ob1){
              })
 	template +='<div style="padding: 15px;position: relative;min-height: 50px;background: rgba(204, 204, 204, 0.07);border-radius: 5px;border: 1px solid #f5f5f5;box-shadow: 1px 1px 6px -3px #7d7d7d;margin-bottom: 20px;"><div style="position: absolute; height: 50px; width: 50px; border-radius: 50%; top:15px; left:15px; overflow: hidden;"><img src="http://i2.wp.com/www.wallpapersbyte.com/wp-content/uploads/2015/06/Space-Galaxy-Circular-Nebula-Vortex-Stars-In-Dark-Blue-Color-WallpapersByte-com-1366x768.jpg?resize=1024%2C576" style="width: 100%; height: 100%;"></div><div style="width:calc(100% - 50px); margin-left: 65px;"><div style="font-weight: bold; ">'+username+'</div><div style="margin-top: 7px;">'+ob2[n].comment+'</div></div></div>';}
 	template +='</div></div></div></div></div></div><div class="artmore"></div><div class="footer"></div></div>';
-	return template; 
+	return template; */
 }
 //end here
 app.get('/article-two',function(req,res){
