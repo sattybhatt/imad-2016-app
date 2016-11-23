@@ -251,17 +251,6 @@ function makecontent(ob1){
 	var tags2=ob1.tags.split(',');
 	var ob2="";
 	var template="";
-	pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
-       if(err){
-           res.status(500).send(err.toString());
-       } else if(result.rows.length===0){
-             res.send('No comment');
-         }
-         else{
-              ob2=result.rows;
-              console.log(ob2);
-             }
-             })
      template+='<!DOCTYPE html><html><head></script><link rel="stylesheet" type="text/css" src="blog3.css"><body>';
     template +='<header><div style="width:650px; margin:auto; position: relative; height: 60px;"><div class="incenter" style=""><div style="display: inline-block;vertical-align: middle; height: 27px;"><img src='+image+' style="height: 100%;"></div><div style="display: inline-block;vertical-align: middle;font-weight: bold;color: white;font-size: 28px;font-family: open sans;text-shadow: 0px 0px 5px #5a5a5a;"><span style="color: #e83751;">#</span><span style="color: #2f9bc7;">S</span></div></div><div></div></div></header>';
 	template +='<div style="position: relative; top:50px;"><div class="artcon"><div style="height:350px; width: 100%; overflow: hidden; background-position: center; background-size: cover; position: relative;background-image: url('+image+')"><div style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 80%,  rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.7) 100%); position: relative; height: 100%;"><div style="width: 650px;margin: auto;height: 100%;position: relative;"><div class="incenter" style="text-align: center; color: white; font-family: Open Sans, sans-serif; text-transform:uppercase; font-size: 40px; font-weight: 800;">'+title+'</div><div style="position: absolute; bottom: 0; left: 0px; width: 100%; padding:10px 20px; box-sizing: border-box;">';
@@ -271,7 +260,15 @@ function makecontent(ob1){
 	template +='</div><div class="" style="margin-top: 30px; border-top:1px solid #ccc;"><div class="head" style="margin: 20px 0;font-size: 22px;font-weight: bold;">Responses</div><div class="" style=""><div class="position:relative; margin-bottom20px;" style=""><div class="writeresprev" style="padding: 15px;position: relative;height: 50px;background: rgba(204, 204, 204, 0.07);border-radius: 5px;box-shadow: 1px 1px 6px -3px #7d7d7d;margin-bottom: 20px;cursor: pointer;border: 1px solid #f5f5f5;"><div class="incenter"><div style="display: inline-block;vertical-align: middle;width: 25px;margin-right: 15px;"><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.5 31.7c-.1 0-.3 0-.4-.1l-5.8-2c-.3-.1-.7-.1-1 .1-2.8 1.5-6.1 2.2-9.3 1.8C6.8 30.7 1 24.8.3 17.6-.2 12.9 1.4 8.3 4.7 5 8 1.7 12.5 0 17.2.4c7.1.6 13 6.1 14.1 13.1.5 3.1.1 6.3-1.3 9.2-.1.3-.2.6-.1.9l1.9 6.6c.1.5 0 1-.4 1.3-.3.1-.6.2-.9.2zM15.9 2.3c-3.7 0-7.2 1.5-9.8 4.1-2.9 2.9-4.3 6.9-3.8 11 .6 6.3 5.7 11.4 12 12.1 2.8.3 5.6-.2 8.1-1.6.8-.4 1.7-.5 2.6-.2l4.6 1.6-1.6-5.2c-.2-.7-.2-1.6.2-2.3 1.2-2.5 1.6-5.3 1.1-8-.9-6.2-6.1-11-12.3-11.5h-1.1z"/></svg></svg></div><div style="display: inline-block;vertical-align: middle;font-size: 20px;">Write your response.</div></div></div><div class="writeres" style="display: none; padding: 15px; position: relative; background: rgba(204, 204, 204, 0.07);border-radius: 5px;box-shadow: 1px 1px 6px -3px #7d7d7d; margin-bottom: 20px; border: 1px solid #f5f5f5;"><div class="writehere" contenteditable="true" style="min-height: 50px;background:white;padding: 15px;border: 1px solid #e1e1e1;"></div><div style="display: inline-block; padding: 7px 20px; background: #34a1ef; color: white; font-weight: bold; margin-top: 14px; border-radius: 5px; cursor: pointer;">Post</div></div></div><div>';
 	console.log('hello');
 	console.log(ob2);
-	for(var n=0;n<ob2.length;n++){
+		pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
+       if(err){
+           res.status(500).send(err.toString());
+       } else if(result.rows.length===0){
+             res.send('No comment');
+         }
+         else{
+              ob2=result.rows;
+        for(var n=0;n<ob2.length;n++){
 		var username="";
 		var idc=ob2[n].idn;
 		pool.query("SELECT username from user3 WHERE id=$1",[idc],function(err,result){
@@ -285,6 +282,8 @@ function makecontent(ob1){
              }
              })
 	template +='<div style="padding: 15px;position: relative;min-height: 50px;background: rgba(204, 204, 204, 0.07);border-radius: 5px;border: 1px solid #f5f5f5;box-shadow: 1px 1px 6px -3px #7d7d7d;margin-bottom: 20px;"><div style="position: absolute; height: 50px; width: 50px; border-radius: 50%; top:15px; left:15px; overflow: hidden;"><img src="http://i2.wp.com/www.wallpapersbyte.com/wp-content/uploads/2015/06/Space-Galaxy-Circular-Nebula-Vortex-Stars-In-Dark-Blue-Color-WallpapersByte-com-1366x768.jpg?resize=1024%2C576" style="width: 100%; height: 100%;"></div><div style="width:calc(100% - 50px); margin-left: 65px;"><div style="font-weight: bold; ">'+username+'</div><div style="margin-top: 7px;">'+ob2[n].comment+'</div></div></div>';}
+             }
+             })
 	template +='</div></div></div></div></div></div><div class="artmore"></div><div class="footer"></div></div>';
 	return template; 
 }
