@@ -1,0 +1,88 @@
+*{
+
+}
+body{
+margin: 0; font-family: lato; font-size: 16px;
+}
+header{
+position: fixed; width:100%; height:50px; background: #4daf4d; z-index: 900;
+}
+.mm{
+position: relative; background: url('http://orig08.deviantart.net/292f/f/2011/273/9/c/blogger_table_background_by_seraphoid-d4bezw5.jpg'); top: 50px;
+}
+.mid{
+width:75%; position: relative; margin: auto;
+}
+.container{
+width:60%; background: #f5f5f5; position: relative; box-sizing:border-box; padding: 20px;top: 25px; 
+}
+.explore{
+width:40%; position: absolute; top: 25px; right:0; background: white;box-sizing:border-box; padding: 20px;
+}
+.article{
+overflow: hidden; border-radius: 10px; box-shadow: 1px 1px 6px -3px #7d7d7d; margin-bottom: 20px; background:white;
+}
+.artimg{
+height:250px; width: 100%; overflow: hidden; background-position: center; background-size: cover; position: relative;
+}
+.arttit{
+padding:15px 20px; position: relative;min-height: 42px;
+}
+.artit{
+font-size: 25px; font-weight: bold; color: #3e3e3e;
+}
+.artres{
+position: absolute; top: 0; right: 15px; width: 80px;
+}
+.vm{
+position: relative; width:24px; top:13px; display: inline-block;
+}
+.incenter{
+position: relative; top:50%; left:50%; transform: translate( -50% , -50% );
+}
+input{
+height: 23px;
+    font-size: 16px;
+	padding:3px;
+}
+#login{
+	height: 30px;
+    width: 76px;
+    background: #54a8b1;
+    color: white;
+}
+.lgo{vertical-align: middle; height:50px; width:50px}
+button{
+text-align: center;
+padding: 6px;
+border: 1px solid;
+border-radius: 4px;
+outline:none;
+width:50px;
+}
+.lgo+span{ font-size: 25px;color: #FFF;}
+.lgin{display:inline-block;margin-left:40%;margin-top: 10px;}
+svg:hover{
+fill:#4daf4d;
+}
+.fb{fill:#254590;}
+.tw{fill:#1DA1F2;}
+.so{fill:#f48023;}
+.lin{fill:rgb(34, 114, 185);}
+.gi{fill:#0d2636;}
+@media screen and (max-width:959px)
+{
+	.explore{display:none;}
+	.lgin{display: -webkit-inline-box;margin-left: 0%;margin-top: 10px;}
+	.container {width: 100%;}
+	.artit {font-size: 16px;}
+	svg{height: 20px;fill: tomato;}
+	.artres {top: 23px;right: 50%;}
+	.vm{display: -webkit-inline-box;}
+	.mid{width: 90%;}
+	svg+div{padding-left:3px;}
+	input{height: 10px;font-size: 10px;width:60px;}
+	.lgo{height: 35px;width: 32px;}
+	#login{width: 52px;background: #54a8b1;color: white;font-size: 12px;height: 24px;}
+	.lgo+span{font-size: 13px;}
+}
