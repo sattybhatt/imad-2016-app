@@ -245,7 +245,7 @@ function makecontent(ob1){
     var content=ob1.content;
     var date=ob1.date;
     var template='<html><head><title>'+title+'</title></head><body><div>Date:'+date.toString()+'</div><div><img src='+image+'>';
-    template +='</div><div>'+title+'</div><div>'+content+'</div><input type="text" name="comment" id="comment"><input type="submit" name="submitc" id="submitc" value="submit"><script type="text/javascript" src="/ui/main2.js"></script></body></html>';
+    template +='</div><div>'+title+'</div><div>'+content+'</div><input type="text" name="comment" id="comment"><input type="submit" name="submitc" id="submitc" value="submit"><script type="text/javascript" src="/ui/main.js"></script></body></html>';
     return template;
 }
 //end here
