@@ -137,6 +137,7 @@ var htmltemplate= `<html>
 //comment add
 app.post('/comment',function(req,res){
     var comment=req.body.comment;
+    console.log(comment);
     console.log(req.session.auth.userid);
     var idc=req.session.auth.userid;
     //console.log(id);
