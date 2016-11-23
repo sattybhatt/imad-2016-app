@@ -96,7 +96,7 @@ console.log(password);
 };
 //end here
 //comment
-var submit_btn3=document.getElementById('submitc');
+/*var submit_btn3=document.getElementById('submitc');
 submit_btn3.onclick=function(){
     console.log('hello submit button is clicked');
 var request=new XMLHttpRequest();
@@ -124,5 +124,5 @@ console.log(comment);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/comment',true);
      request.setRequestHeader('Content-type','application/json');
     request.send(JSON.stringify({comment:comment}));
-};
+};*/
 //end here
