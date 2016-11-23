@@ -94,7 +94,7 @@ app.get('/check-login',function(req,res)
     //console.log(req.session.auth.userid);
     if(req.session && req.session.auth && req.session.auth.userid)
     {
-        res.send('You are logged in:'+req.session.auth.userid);
+        res.send('You are logged in:'+req.session.auth.userid.toString());
     }
     else{
      res.send('Not logged in');   
@@ -133,7 +133,7 @@ var htmltemplate= `<html>
 //comment add
 app.post('/comment',function(req,res){
     var comment=req.body.comment;
-    var idc=session.auth.userid;
+    var idc=req.session.auth.userid;
     //console.log(id);
     pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[idc,comment],function(err,result){
        if(err){
