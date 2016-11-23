@@ -26,6 +26,6 @@ var comment=document.getElementById('comment').value;
 //console.log(comment);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/comment',true);
      request.setRequestHeader('Content-type','application/json');
-    request.send(JSON.stringify({comment:comment}));
+    request.send(JSON.stringify({comment1:comment}));
 };
 //end here
