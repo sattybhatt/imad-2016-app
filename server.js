@@ -140,7 +140,7 @@ app.post('/comment',function(req,res){
     console.log(req.session.auth.userid);
     var idc=req.session.auth.userid;
     //console.log(id);
-    pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[idc,comment],function(err,result){
+    pool.query("INSERT into comment(idn,comment) VALUES($1,$2)",[idc,comment],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else{
