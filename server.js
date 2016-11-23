@@ -259,6 +259,7 @@ function makecontent(ob1){
          }
          else{
               ob2=result.rows;
+              console.log(ob2);
              }
              })
      template+='<!DOCTYPE html><html><head></script><link rel="stylesheet" type="text/css" src="blog3.css"><body>';
