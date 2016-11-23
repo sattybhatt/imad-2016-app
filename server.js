@@ -197,7 +197,7 @@ function makepage(ob1)
 	for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
 	var img=ob1[m].image;
-	var tags=JSON.stringify(ob1[m].tags);
+	//var tags=JSON.stringify(ob1[m].tags);
 	console.log('hello2');
 	console.log(tags[0]);
 	htmltemplate+='<div class="article"><div class="artimg" style="background-image: url('+img+')"><div style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 80%,  rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.7) 100%); position: absolute; height: 100%; width:100%; top:0; right:0;"><div style="position: absolute; bottom: 0; left: 0px; width: 100%; padding:10px 20px; box-sizing: border-box;">';
