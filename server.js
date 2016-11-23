@@ -284,7 +284,7 @@ function makecontent(ob1){
              })}
              }
              })
-	template +='</div></div></div></div></div></div><div class="artmore"></div><div class="footer"></div></div>';
+	template +='</div></div></div></div></div><div class="artmore"></div><div class="footer"></div></div>';
 	return template; 
 }
 //end here
