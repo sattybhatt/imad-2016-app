@@ -16,7 +16,7 @@ width:75%; position: relative; margin: auto;
 .container{
 width:60%; background: #f5f5f5; position: relative; box-sizing:border-box; padding: 20px;top: 25px; 
 }
-a{text-decoration:none;}
+a{text-decoration: none;}
 .explore{
 width:40%; position: absolute; top: 25px; right:0; background: white;box-sizing:border-box; padding: 20px;
 }
