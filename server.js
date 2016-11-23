@@ -88,6 +88,10 @@ app.post('/login',function(req,res){
          });
     });
 //end
+function rid(){
+    var rid1=req.session.auth.userid;
+    return(rid1);
+}
 //check login
 app.get('/check-login',function(req,res)
 {
@@ -133,7 +137,7 @@ var htmltemplate= `<html>
 //comment add
 app.post('/comment',function(req,res){
     var comment=req.body.comment;
-    var idc=req.session.auth.userid.toString();
+    var idc=rid();
     //console.log(id);
     pool.query("INSERT into comment(id,comment) VALUES($1,$2)",[idc,comment],function(err,result){
        if(err){
