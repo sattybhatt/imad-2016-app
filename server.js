@@ -136,7 +136,7 @@ var htmltemplate= `<html>
 }
 //comment add
 app.post('/comment',function(req,res){
-    var comment=req.body.comment;
+    var comment=req.body.comment1;
     console.log(comment);
     console.log(req.session.auth.userid);
     var idc=req.session.auth.userid;
@@ -186,7 +186,8 @@ app.get('/blog1',function(req,res){
    else{
        if(result.rows.length===0){
          res.status(400).send('No blog found');  
-       }else{
+       }
+       else{
         res.send(makepage(result.rows));
        }
    } 
