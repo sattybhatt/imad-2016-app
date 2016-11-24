@@ -54,12 +54,12 @@ height: 35px;
 }
 .lgo{vertical-align: middle; height:50px; width:50px}
 button{
+       border: 3px solid black;
+    width: 75px;
 text-align: center;
 padding: 6px;
-border: 1px solid;
 border-radius: 4px;
 outline:none;
-width:50px;
 background: #104d90;
 color: white;
 cursor: pointer;
