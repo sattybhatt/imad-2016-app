@@ -60,6 +60,9 @@ border: 1px solid;
 border-radius: 4px;
 outline:none;
 width:50px;
+background: #104d90;
+color: white;
+cursor: pointer;
 }
 .lgo+span{ font-size: 25px;color: #FFF;}
 .lgin{display:inline-block;margin-left:40%;margin-top: 10px;}
