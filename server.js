@@ -11,9 +11,9 @@ app.use(session({
     secret:'randomvalue',
     cookie:{maxAge:1000*60*60*24*30}
 }));
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index2.html'));
-});
+}); */
 var counter=0;
 app.get('/counter',function(req,res){
     counter=counter+1;
@@ -178,7 +178,7 @@ app.get('/ui/main.js',function(req,res){
 }); */
 
 //twice attempt
-app.get('/blog1',function(req,res){
+app.get('/',function(req,res){
    pool.query("SELECT * from article ORDER by id ASC",function(err,result){
    if(err){
        res.status(500).send(err.toString());
