@@ -239,8 +239,9 @@ app.get('/blog/:blogName',function(req,res){
    } 
    });
 }); 
-function returnc(){
+function returnc(aid2){
     comm="";
+    var aid=aid2;
 		pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
        if(err){
            res.status(500).send(err.toString());
@@ -278,7 +279,7 @@ function makecontent(ob1){
     var content=ob1.content;
     var date=ob1.date;
 	var aid=ob1.id;
-	var z=returnc();
+	var z=returnc(aid);
 	var tags2=ob1.tags.split(',');
 	var ob2="";
 	var template="";
