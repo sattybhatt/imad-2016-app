@@ -29,3 +29,8 @@ var comment=document.getElementById('comment').value;
     request.send(JSON.stringify({comment1:comment}));
 };
 //end here
+var xr=document.getElementById('lcarea');
+xr.onclick=function(){
+var zr=document.getElementById('writeres');
+zr.style.display='block';
+}
