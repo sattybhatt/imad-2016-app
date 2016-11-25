@@ -30,10 +30,11 @@ request.onreadystatechange=function()
     }
 };
 var comment=document.getElementById('comment').value;
+var aid=document.getElementById('aid').value
 //console.log(comment);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/comment',true);
      request.setRequestHeader('Content-type','application/json');
-    request.send(JSON.stringify({comment1:comment}));
+    request.send(JSON.stringify({comment1:comment,aid:aid}));
 };
 //end here
 
