@@ -282,6 +282,7 @@ function makecontent(ob1){
     var date=ob1.date;
 	var aid=ob1.id;
 	var z=returnc(aid);
+	console.log('z'+z);
 	var tags2=ob1.tags.split(',');
 	var ob2="";
 	var template="";
