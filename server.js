@@ -239,8 +239,8 @@ app.get('/blog/:blogName',function(req,res){
    } 
    });
 }); 
+ comm="";
 function returnc(aid2){
-    comm="";
     var aid=aid2;
 		pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
        if(err){
@@ -267,10 +267,10 @@ function returnc(aid2){
             
              }
              })}
-             return comm;
+             
              }
              })
-             
+      return comm;       
 }
 
 //end here
