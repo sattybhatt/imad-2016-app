@@ -138,6 +138,7 @@ var htmltemplate= `<html>
 app.post('/comment',function(req,res){
     var comment=req.body.comment1;
     var aid=req.body.aid2;
+    console.log(aid);
     console.log(comment);
     console.log(req.session.auth.userid);
     var idc=req.session.auth.userid;
