@@ -251,7 +251,7 @@ function makecontent(ob1){
 	var tags2=ob1.tags.split(',');
 	var ob2="";
 	var template="";
-     template+='<!DOCTYPE html><html><head></script><link rel="stylesheet" type="text/css" src="blog3.css"><body>';
+     template+='<!DOCTYPE html><html><head></script><link rel="stylesheet" type="text/css" src="/ui/blog3.css"><body>';
     template +='<header><div style="width:650px; margin:auto; position: relative; height: 60px;"><div class="incenter" style=""><div style="display: inline-block;vertical-align: middle; height: 27px;"><img src='+image+' style="height: 100%;"></div><div style="display: inline-block;vertical-align: middle;font-weight: bold;color: white;font-size: 28px;font-family: open sans;text-shadow: 0px 0px 5px #5a5a5a;"><span style="color: #e83751;">#</span><span style="color: #2f9bc7;">S</span></div></div><div></div></div></header>';
 	template +='<div style="position: relative; top:50px;"><div class="artcon"><div style="height:350px; width: 100%; overflow: hidden; background-position: center; background-size: cover; position: relative;background-image: url('+image+')"><div style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 80%,  rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.7) 100%); position: relative; height: 100%;"><div style="width: 650px;margin: auto;height: 100%;position: relative;"><div class="incenter" style="text-align: center; color: white; font-family: Open Sans, sans-serif; text-transform:uppercase; font-size: 40px; font-weight: 800;">'+title+'</div><div style="position: absolute; bottom: 0; left: 0px; width: 100%; padding:10px 20px; box-sizing: border-box;">';
 	for(var m=0;m<tags2.length;m++)
@@ -296,6 +296,9 @@ app.get('/ui/blog1.css',function(req,res){
 });
 app.get('/ui/blog2.css',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'blog2.css'));
+});
+app.get('/ui/blog3.css',function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'blog3.css'));
 });
 app.get('/ui/main2.js',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'main2.js'));
