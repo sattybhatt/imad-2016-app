@@ -29,7 +29,7 @@ request.onreadystatechange=function()
          }
     }
 };
-var comment=document.getElementById('comment').value;
+var comment=document.getElementById('comment').innerHTML;
 var aid=document.getElementById('aid').value;
 //console.log(comment);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/comment',true);
