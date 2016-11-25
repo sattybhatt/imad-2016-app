@@ -239,7 +239,7 @@ app.get('/blog/:blogName',function(req,res){
    } 
    });
 }); 
- //window.comm="";
+ window.comm="";
 function returnc(aid2){
     var aid=aid2;
 		pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
