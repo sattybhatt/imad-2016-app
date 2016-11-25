@@ -270,6 +270,7 @@ function returnc(aid2){
              
              }
              })
+             console.log('comm'+comm);
       return comm;       
 }
 
