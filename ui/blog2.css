@@ -1,6 +1,4 @@
-*{
 
-}
 body{
 margin: 0; font-family: lato; font-size: 16px;
 }
@@ -33,7 +31,7 @@ padding:15px 20px; position: relative;min-height: 42px;
 font-size: 25px; font-weight: bold; color: #3e3e3e;
 }
 .artres{
-position: absolute; top: 0; right: 15px; width: 80px;
+position: absolute;display: inline;top: 35px; right: 7px;width: 80px;
 }
 .vm{
 position: relative; width:24px; top:13px; display: inline-block;
