@@ -17,15 +17,15 @@ request.onreadystatechange=function()
          if(request.status==200)
          {
              console.log(request.responseText);
-            alert('Commented');
+           // alert('Commented');
          }
          else if(request.status==403)
          {
-            alert('USername/password is incorrect');
+            //alert('USername/password is incorrect');
          }
          else if(request.status==500)
          {
-            alert('Something went wrong on server');
+            //alert('Something went wrong on server');
          }
     }
 };
