@@ -262,7 +262,7 @@ app.get('/blog/:blogName',function(req,res){
  comm="";username="";
 function returnc(aid2){
     var aid=aid2;
-		pool.query("SELECT * from comment WHERE aid=$1",[aid],function(err,result){
+		pool.query("SELECT * from comment WHERE aid=$1 ORDER by cno DESC",[aid],function(err,result){
        if(err){
            res.status(500).send(err.toString());
        } else if(result.rows.length===0){
