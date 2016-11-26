@@ -203,7 +203,7 @@ function makepage(ob1)
     //start new
 	var htmltemplate ='<html><link rel="shortcut icon" href="/ui/favicon.ico" type="image/x-icon"/ ><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/ui/blog2.css" rel="stylesheet" /><title>Sattyam Bhatt\'s Blog</title></head><body><header><div style="display:inline-block;"><img class="lgo" src="https://cloud.imad.hasura.io/rstatic/dist/53034ebcba2fcc0cbccf30fcd1b3bb14.png" style=""><span style="">Sattyam Bhatt\'s Blog</span></div>';
 	htmltemplate+='<div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div>'
-	htmltemplate+='<div style="" class="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" value="login" id="rsubmitbutton"   name="submit" value="submit">Sign in</button></div></header>';
+	htmltemplate+='<div style="" class="lgin" id="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" value="login" id="rsubmitbutton"   name="submit" value="submit">Sign in</button></div></header>';
 	htmltemplate+='<div class="signin"></div><div class="mm"><div class="mid"><div class="container"><div class="head"></div><div class="arcts">';
 	for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
