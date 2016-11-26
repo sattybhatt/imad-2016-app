@@ -79,6 +79,9 @@ request.onreadystatechange=function()
              if((x>6)&&(x<12)){ m="Good mroning "+username;}
              else if((x>12)&&(x<22)){ m="Good evening "+username;}
              else{ m="Its night"+username;}
+             var n2=document.getElementById('gm');
+             n2.innerHTML(m);
+             n2.style.display='block';
             alert(m);
          }
          else if(request.status==403)
