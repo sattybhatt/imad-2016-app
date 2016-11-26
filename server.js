@@ -102,7 +102,7 @@ app.get('/check-login',function(req,res)
     //console.log(req.session.auth.userid);
     if(req.session && req.session.auth && req.session.auth.userid)
     {
-        res.send('You are logged in:'+req.session.auth.userid.toString());
+        res.send('You are logged in:'+req.session.auth.username2.toString());
     }
     else{
      res.send('Not logged in');   
