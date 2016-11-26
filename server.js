@@ -309,8 +309,8 @@ app.get('/article-two',function(req,res){
 app.get('/ui/blog1.css',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'blog1.css'));
 });
-app.get('/ui/favicon.io',function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'favicon.io'));
+app.get('/ui/favicon.ico',function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
 });
 app.get('/ui/blog2.css',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'blog2.css'));
