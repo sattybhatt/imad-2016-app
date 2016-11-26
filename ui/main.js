@@ -80,6 +80,8 @@ request.onreadystatechange=function()
              else if((x>12)&&(x<22)){ m="Good evening "+username;}
              else{ m="Its night"+username;}
              var n2=document.getElementById('gm');
+             var n3=document.getElementById('lgin');
+             n3.style.display='none';
              n2.innerHTML(m);
              n2.style.display='block';
             alert(m);
