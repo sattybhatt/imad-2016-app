@@ -1,4 +1,4 @@
-
+app.use(express.cookieParser());
 var xr=document.getElementById('lcarea');
 xr.onclick=function(){
 var zr=document.getElementById('writeres');
