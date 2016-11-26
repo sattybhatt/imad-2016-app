@@ -83,9 +83,9 @@ app.post('/login',function(req,res){
              var hashedpassword=hash(password,salt);
              if(hashedpassword===dbstring){
                  req.session.auth={userid:result.rows[0].id,username2:username};
-                 sess = req.session;
+                /* sess = req.session;
                  sess.userid=userid;
-                 sess.username2=username;
+                 sess.username2=username; */
                  res.send("USER IS CORRECT");
              }
              }
