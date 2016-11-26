@@ -81,9 +81,9 @@ request.onreadystatechange=function()
              else{ m="Its night"+username;}
              var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
-             n3.style.display='inline-block';
+             n3.style.display='none';
              n2.innerHTML=m;
-             n2.style.display='block';
+             n2.style.display='inline-block';
             //alert(m);
          }
          else if(request.status==403)
