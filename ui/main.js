@@ -82,9 +82,9 @@ request.onreadystatechange=function()
              var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
              n3.style.display='none';
-             n2.innerHTML(m);
+             n2.innerHTML=m;
              n2.style.display='block';
-            alert(m);
+            //alert(m);
          }
          else if(request.status==403)
          {
