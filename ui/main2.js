@@ -1,14 +1,4 @@
 
-var session=require('express-session');
-var app = express();
-var bodyParser=require('body-parser');
-app.use(morgan('combined'));
-app.use(bodyParser.json());
-app.use(session({
-    secret:'randomvalue',
-    cookie:{maxAge:1000*60*60*24*30}
-}));
-//
 var xr=document.getElementById('lcarea');
 xr.onclick=function(){
 var zr=document.getElementById('writeres');
