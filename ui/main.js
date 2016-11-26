@@ -81,7 +81,7 @@ request.onreadystatechange=function()
              else{ m="Its night"+username;}
              var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
-             n3.style.display='none';
+             n3.style.display='inline-block';
              n2.innerHTML=m;
              n2.style.display='block';
             //alert(m);
