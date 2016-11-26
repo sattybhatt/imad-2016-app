@@ -76,8 +76,8 @@ request.onreadystatechange=function()
              var m="";
              console.log(request.responseText);
              var x=new Date().getHours();
-             if((x>6)&&(x<12)){ m="Good mroning"+username;}
-             else if((x>12)&&(x<22)){ m="Good evening"+username;}
+             if((x>6)&&(x<12)){ m="Good mroning "+username;}
+             else if((x>12)&&(x<22)){ m="Good evening "+username;}
              else{ m="Its night"+username;}
             alert(m);
          }
