@@ -22,7 +22,9 @@ request.onreadystatechange=function()
             //var z3=comm+z2;
             //console.log(z3);
             //document.getElementById('lcm').innerHTML=z3;
+            console.log(z2.innerHTML);
             z2.innerHTML = z2.innerHTML +comm;
+            
          }
          else if(request.status==403)
          {
