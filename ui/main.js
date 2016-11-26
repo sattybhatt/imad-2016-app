@@ -72,9 +72,13 @@ request.onreadystatechange=function()
     if(request.readyState==XMLHttpRequest.DONE)
     {
          if(request.status==200)
-         {
+         {      var m="";
              console.log(request.responseText);
-            alert('USer is valid');
+             var x=new Date().getHours();
+             if((x>6)&&(x<12)){ m="Good mroning"+username;}
+             else if((x>12)&&(x<22)){ m="Good evening"+username;}
+             else((x>22)&&(x<23)){ m="Its night"+username;}
+            alert(m);
          }
          else if(request.status==403)
          {
