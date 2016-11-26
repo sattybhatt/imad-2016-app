@@ -151,7 +151,7 @@ app.post('/comment',function(req,res){
        if(err){
            res.status(500).send(err.toString());
        } else{
-           alert('Commented');
+           //alert('Commented');
          //alert("Username created:"+username);
        }
     });
