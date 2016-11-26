@@ -271,6 +271,7 @@ function returnc(aid2){
          else{
               ob2=result.rows;
         for(var n=0;n<ob2.length;n++){
+            console.log(n);
 		var username="";
 		var idc=ob2[n].idn;
 		var comment=ob2[n].comment;
@@ -290,7 +291,7 @@ function returnc(aid2){
              
              }
              })
-             console.log('comm'+global.comm);
+            // console.log('comm'+global.comm);
       return global.comm;       
 }
 
