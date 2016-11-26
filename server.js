@@ -51,15 +51,6 @@ app.get('/test-db',function(req,res){
        }
     });
 });
-//function hiding
- var z9=document.getElementById('lk');
- z9.onclick=function(){
-var z211=document.getElementById('mm');
-z211.style.opacity="1.0";
-var z3=document.getElementById('lk');
- z3.style.display='none';
- };
-//
 //create user
 app.post('/create-user',function(req,res){
     var username=req.body.username;
