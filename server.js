@@ -81,7 +81,7 @@ app.post('/login',function(req,res){
              var salt=dbstring.split('$')[2];
              var hashedpassword=hash(password,salt);
              if(hashedpassword===dbstring){
-                 req.session.auth={userid:result.rows[0].id};
+                 req.session.auth={userid:result.rows[0].id,username2:username};
                  res.send("USER IS CORRECT");
              }
              }
@@ -205,6 +205,11 @@ function makepage(ob1)
 	htmltemplate+='<div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div>'
 	htmltemplate+='<div style="" class="lgin" id="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" value="login" id="rsubmitbutton"   name="submit" value="submit">Sign in</button></div></header>';
 	htmltemplate+='<div class="signin"></div><div class="mm"><div class="mid"><div class="container"><div class="head"></div><div class="arcts">';
+	        var n2=document.getElementById('gm');
+             var n3=document.getElementById('lgin');
+             n3.style.display='none';
+             n2.innerHTML=m;
+             n2.style.display='inline-block';
 	for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
 	var img=ob1[m].image;
