@@ -33,6 +33,10 @@ function hello1(){
 var submit_btn=document.getElementById('submitbutton');
 submit_btn.onclick=function(){
     console.log('hello submit button is clicked');
+    var z2=document.getElementById('mm');
+    z2.style.opacity="0.1";
+    var z3=document.getElementById('lk');
+    z3.style.display='block';
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
