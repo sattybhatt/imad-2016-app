@@ -207,6 +207,7 @@ function makepage(ob1)
 	htmltemplate+='<div style="" class="lgin" id="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" value="login" id="rsubmitbutton"   name="submit" value="submit">Sign in</button></div></header>';
 	htmltemplate+='<div class="signin"></div><div class="mm"><div class="mid"><div class="container"><div class="head"></div><div class="arcts">';
 	//check code
+	console.log(sess.userid);
 	if(sess.userid){
 	        var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
