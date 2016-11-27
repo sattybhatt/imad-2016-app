@@ -2,11 +2,10 @@
 body{
 margin: 0; font-family: lato; font-size: 16px;
 }
-header{
-position: fixed; width:100%; height:50px; background: #4daf4d; z-index: 900;
+header{position: fixed;width: 100%;height: 54px;background: #ff2241;z-index: 900;border: 1px solid #ff2241; font: 14px/1.5 Arial;
 }
 .mm{
-position: relative; background: url('http://orig08.deviantart.net/292f/f/2011/273/9/c/blogger_table_background_by_seraphoid-d4bezw5.jpg'); top: 50px;
+position: relative;background: #f7f7f7; top: 50px;
 }
 .mid{
 width:75%; position: relative; margin: auto;
@@ -57,7 +56,7 @@ text-align: center;
 padding: 6px;
 border-radius: 4px;
 outline:none;
-background: #104d90;
+background: #3f3f3f;
 color: white;
 cursor: pointer;
 touch-action: manipulation;
