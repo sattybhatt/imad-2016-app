@@ -79,15 +79,16 @@ fill:#4daf4d;
 @media screen and (max-width:959px)
 {
 	.explore{display:none;}
-	.lgin{display: -webkit-inline-box;margin-left: 0%;margin-top: 10px;}
+	.lgin{display: -webkit-inline-box;margin-left: 0%;margin-top: 10px;width: 209px;}
 	.container {width: 100%;}
+	button{height: 23px;width: 46px;font-size: 10px;padding: 0px; margin-left: 6px;}
 	.artit {font-size: 16px;}
 	svg{height: 20px;fill: tomato;}
 	.artres {top: 23px;right: 50%;}
 	.vm{display: -webkit-inline-box;}
 	.mid{width: 90%;}
 	svg+div{padding-left:3px;}
-	input{height: 10px;font-size: 10px;width:60px;}
+	input{height: 20px;font-size: 10px;width: 67px;margin-left: 11px;}
 	.lgo{height: 35px;width: 32px;}
 	#login{width: 52px;background: #54a8b1;color: white;font-size: 12px;height: 24px;}
 	.lgo+span{font-size: 13px;}
