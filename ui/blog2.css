@@ -58,23 +58,24 @@ height: 35px;
     background: #54a8b1;
     color: white;
 }
-.lgo{vertical-align: middle; height:50px; width:50px}
-button{
-    width: 75px;
-text-align: center;
-padding: 6px;
-border-radius: 4px;
-outline:none;
-background: #3f3f3f;
-color: white;
-cursor: pointer;
-touch-action: manipulation;
+.lgo {vertical-align: middle;height: 50px;width: 72px;}
+button {
+    width: 70px;
+    text-align: center;
+    border-radius: 1px;
+    outline: none;
+    background: #3f3f3f;
+    color: white;
+    cursor: pointer;
+    touch-action: manipulation;
     border: 1px solid transparent;
-    font-size: 14px;
     line-height: 1.42857;
-    border-color: #2e6da4;
+    height: 25px;
+    font-size: 13px;
+    margin-left: 10px;
+    border-color: #3f3f3f;
 }
-.lgo+span{ font-size: 25px;color: #FFF;}
+.lgo+span {font-size: 25px;color: #FFF;margin-left: 10px;font-family: 'Gloria Hallelujah', cursive;}
 .lgin{display:inline-block;margin-left:40%;margin-top: 10px;}
 svg:hover{
 fill:#4daf4d;
