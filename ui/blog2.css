@@ -53,6 +53,7 @@ input{
     padding: 3px;
     margin-left: 10px;
     width: 170px;
+    border-radius: 1px;
 }
 #login{
 	height: 30px;
