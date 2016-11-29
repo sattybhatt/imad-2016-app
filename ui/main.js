@@ -32,6 +32,10 @@ function hello1(){
 //code for registering user submit_btn
 var submit_btn=document.getElementById('submitbutton');
 submit_btn.onclick=function(){
+    var lo=document.getElementById('lk');
+    lo.style.display='block';
+    var lc=document.getElementById('mm');
+    lo.style.opacity='0.2';
     console.log('hello submit button is clicked');
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
