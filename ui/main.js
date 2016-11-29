@@ -37,7 +37,7 @@ submit_btn.onclick=function(){
     var lc=document.getElementById('mm');
     lo.style.opacity='0.2';
     console.log('hello submit button is clicked');
-var request=new XMLHttpRequest();
+/*var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
     if(request.readyState==XMLHttpRequest.DONE)
@@ -63,7 +63,7 @@ console.log(username2);
 console.log(password2);
      request.open('POST','http://sattybhatt.imad.hasura-app.io/create-user',true);
      request.setRequestHeader('Content-type','application/json');
-     request.send(JSON.stringify({username: username2,password: password2}));
+     request.send(JSON.stringify({username: username2,password: password2}));*/
 };
 //end here
 //code for login
