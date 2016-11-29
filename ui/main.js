@@ -109,9 +109,10 @@ console.log(password);
     request.send(JSON.stringify({username:username,password:password}));
 };
 //end here
-  var lo2=document.getElementById('lk');
+  var lo2=document.getElementById('addo');
   lo2.onclick=function(){
-     lo2.style.display='none'; 
+      var lo3=document.getElementById('lk');
+     lo3.style.display='none'; 
       var lc=document.getElementById('mm');
     lc.style.opacity='1.0';
   }
