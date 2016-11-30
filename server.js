@@ -3,12 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var session=require('express-session');
-var RedisStore = require('connect-redis')(session);
 var app = express();
 var bodyParser=require('body-parser');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-app.use(express.cookieParser());
 app.use(session({
     secret:'randomvalue',
     cookie:{maxAge:1000*60*60*24*30}
