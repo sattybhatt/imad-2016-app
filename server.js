@@ -214,13 +214,13 @@ function makepage(ob1)
 htmltemplate+='<div class="mm" id="mm"><div class="mid"><div class="container"><div class="head"></div><div class="arcts">';
 	//check code
 //	console.log(usrd);
-	 if(req.session && req.session.auth && req.session.auth.userid){
+	/* if(req.session && req.session.auth && req.session.auth.userid){
 	        var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
              n3.style.display='none';
              //n2.innerHTML=req.session.auth.username2;
              n2.style.display='inline-block';
-	}
+	} */
 	//check end
 	for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
