@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var session=require('express-session');
+var RedisStore = require('connect-redis')(session)
 var app = express();
 var bodyParser=require('body-parser');
 app.use(morgan('combined'));
