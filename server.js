@@ -196,15 +196,14 @@ app.get('/',function(req,res){
          res.status(400).send('No blog found');  
        }
        else{
-        res.send(makepage(result.rows));
+        res.send(makepage(result.rows,req));
        }
    } 
    });
 }); 
 //end here
 //function makepage
-function makepage(ob1)
- {
+function makepage(ob1,req){
     //start new
 	var htmltemplate ='<html><head><link rel="icon" type="image/png" href="/ui/favicon-32x32.png" sizes="32x32" /><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/ui/blog2.css" rel="stylesheet" /><title>Sattyam Bhatt\'s Blog</title><link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"></head><body><header><div style="display:inline-block;"><img class="lgo" src="http://www.clker.com/cliparts/4/r/X/K/j/e/quill-feather-pen-md.png" style=""><span style="">Sattyam Bhatt\'s Blog</span></div>';
 	htmltemplate+='<div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div>'
@@ -214,13 +213,17 @@ function makepage(ob1)
 htmltemplate+='<div class="mm" id="mm"><div class="mid"><div class="container"><div class="head"></div><div class="arcts">';
 	//check code
 //	console.log(usrd);
-	/* if(req.session && req.session.auth && req.session.auth.userid){
-	        var n2=document.getElementById('gm');
+	 if(req.session && req.session.auth && req.session.auth.userid){
+	      console.log('hello2');
+	       /* var n2=document.getElementById('gm');
              var n3=document.getElementById('lgin');
              n3.style.display='none';
              //n2.innerHTML=req.session.auth.username2;
-             n2.style.display='inline-block';
-	} */
+             n2.style.display='inline-block'; */
+	} 
+	else{
+	    console.log('hello');
+	}
 	//check end
 	for(var m=0;m<ob1.length;m++){
 	var title=ob1[m].title;
