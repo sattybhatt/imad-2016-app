@@ -5,7 +5,7 @@ margin: 0; font-family: lato; font-size: 16px;
 header{position: fixed;width: 100%;height: 54px;background: #121B1F;z-index: 900;border: 1px solid #121B1F; font: 14px/1.5 Arial;
 }
 .mm{
-position: relative;background: #f7f7f7; top: 50px;
+position: relative;background: #fafafa!important; top: 50px;
 }
 .mid{
 width:75%; position: relative; margin: auto;
