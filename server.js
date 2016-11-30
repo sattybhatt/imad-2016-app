@@ -187,7 +187,6 @@ app.get('/ui/main.js',function(req,res){
 
 //twice attempt
 app.get('/',function(req,res){
-    usrd=req.session.auth.userid;
    pool.query("SELECT * from article ORDER by id ASC",function(err,result){
    if(err){
        res.status(500).send(err.toString());
@@ -197,6 +196,7 @@ app.get('/',function(req,res){
          res.status(400).send('No blog found');  
        }
        else{
+        var usrd=req.session.auth.userid;
         res.send(makepage(result.rows,usrd));
        }
    } 
