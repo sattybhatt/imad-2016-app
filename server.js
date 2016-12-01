@@ -251,7 +251,7 @@ app.get('/blog/:blogName',function(req,res){
          res.status(400).send('Article not found');  
        }else{
         var articleData=result.rows[0];
-         res.send(makecontent(articleData));
+         res.send(makecontent(articleData,req));
        }
    } 
    });
@@ -301,6 +301,7 @@ function makecontent(ob1){
     var image=ob1.image;
     var content=ob1.content;
     var date=ob1.date;
+    var username2=req.session.auth.username2;
 	var aid=ob1.id;
 	var z=returnc(aid);
 	 global.comm="";
@@ -309,7 +310,7 @@ function makecontent(ob1){
 	var ob2="";
 	var template="";
      template+='<!DOCTYPE html><html><head><link rel="icon" type="image/png" href="/ui/favicon-32x32.png" sizes="32x32" /><link href="/ui/blog3.css" rel="stylesheet" /><link href="/ui/blog2.css" rel="stylesheet" /></head><body>';
-    template +='<input type="hidden" name="aid" id="aid" value="'+aid+'"><header><div style="display:inline-block;"><img class="lgo" src="http://www.clker.com/cliparts/4/r/X/K/j/e/quill-feather-pen-md.png" style=""><span style="">Sattyam Bhatt\'s Blog</span></div><div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div><div style="" class="lgin" id="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" valu="login" id="rsubmitbutton" name="submit" value="submit">Sign in</button></div></header>';
+    template +='<input type="hidden" name="aid" id="aid" value="'+aid+'"><input type="hidden" id="username2" value="'+username2+'"><header><div style="display:inline-block;"><img class="lgo" src="http://www.clker.com/cliparts/4/r/X/K/j/e/quill-feather-pen-md.png" style=""><span style="">Sattyam Bhatt\'s Blog</span></div><div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div><div style="" class="lgin" id="lgin"><input type="text" name="rusername" id="rusername" placeholder="Username"><input type="password" name="rpassword" id="rpassword" placeholder="Password here"><button class="submit" valu="login" id="rsubmitbutton" name="submit" value="submit">Sign in</button></div></header>';
 	template +='<div style="position: relative; top:50px;"><div class="artcon"><div style="height:350px; width: 100%; overflow: hidden; background-position: center; background-size: cover; position: relative;background-image: url('+image+')"><div style="background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 80%,  rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 0.7) 100%); position: relative; height: 100%;"><div style="width: 650px;margin: auto;height: 100%;position: relative;"><div class="incenter" style="text-align: center; color: white; font-family: Open Sans, sans-serif; text-transform:uppercase; font-size: 40px; font-weight: 800;">'+title+'</div><div style="position: absolute; bottom: 0; left: 0px; width: 100%; padding:10px 20px; box-sizing: border-box;">';
 	for(var m=0;m<tags2.length;m++)
 	{template +='<div style="font-family: open sans;margin-right: 3px;display: inline-block;color: white;text-align: center;padding: 5px 10px;border-radius: 4px;background: #104d90;font-size: 17px;border: 1px solid rgba(150,150,150,0.3137254901960784);">#'+tags2[m]+'</div>';}
