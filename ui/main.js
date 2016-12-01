@@ -119,7 +119,10 @@ console.log(password);
   //logout
   var logout=document.getElementById('logout');
   logout.onclick=function(){
-      
+      var gm=document.getElementById('gm');
+      var lgin=document.getElementById('lgin');
+      gm.style.display='none';
+      lgin.style.display='inline';
   };
  
     
