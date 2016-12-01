@@ -38,4 +38,13 @@ var aid=document.getElementById('aid').value;
     request.send(JSON.stringify({comment1:comment,aid2:aid}));
 };
 //end here
-
+ //logout
+  var logout=document.getElementById('logout');
+  logout.onclick=function(){
+      var gm=document.getElementsByClassName('gm');
+      gm[1].style.display='none';
+      var lgin=document.getElementById('lgin');
+      lgin.style.display='inline';
+      var logout=document.getElementById('logout');
+      logout.style.display='none';
+  };
