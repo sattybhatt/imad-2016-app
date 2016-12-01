@@ -69,7 +69,10 @@ console.log(password2);
 //code for login
 var submit_btn2=document.getElementById('rsubmitbutton');
 submit_btn2.onclick=function(){
-    console.log('hello submit button is clicked');
+ var lo=document.getElementById('lgif');
+    lo.style.display='block';
+    var lc=document.getElementById('mm');
+    lc.style.opacity='0.2';
 var request=new XMLHttpRequest();
 request.onreadystatechange=function()
 {
@@ -77,6 +80,8 @@ request.onreadystatechange=function()
     {
          if(request.status==200)
          {     
+              lo.style.display='none';
+              lc.style.opacity='1.0';
              var m="";
              console.log(request.responseText);
              var x=new Date().getHours();
