@@ -1,8 +1,6 @@
 
 body{
-margin: 0; font-family: lato; font-size: 16px; font-family: 'Lora', serif; color: #272727;position: relative;
-    background: #fafafa!important;
-    top: 50px;
+margin: 0; font-family: lato; font-size: 16px; font-family: 'Lora', serif;position: relative;background: #fafafa!important;top: 50px;
 }
 [contenteditable=true]:empty:before {
 	color:inherit;
