@@ -280,7 +280,7 @@ function returnc(aid2){
              res.send('USERNAME OR PASSWORD IS INVALID');
          }
          else{
-             username=result9.rows[0].username.toString();
+             username=result9.rows[n].username.toString();
             // console.log(username);
              }
              })
