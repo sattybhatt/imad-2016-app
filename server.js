@@ -208,7 +208,7 @@ function makepage(ob1,req){
 	var htmltemplate ='<html><head><link rel="icon" type="image/png" href="/ui/favicon-32x32.png" sizes="32x32" /><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="/ui/blog2.css" rel="stylesheet" /><title>Sattyam Bhatt\'s Blog</title><link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"></head><body><header><div style="display:inline-block;"><img class="lgo" src="http://www.clker.com/cliparts/4/r/X/K/j/e/quill-feather-pen-md.png" style=""><span style="">Sattyam Bhatt\'s Blog</span></div>';
 	htmltemplate+='<div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;"></div>'
 		 if(req.session && req.session.auth && req.session.auth.userid){
-	      htmltemplate+='User'+req.session.auth.username2+'</header>';
+		htmltemplate+='<div id="gm" style="display: none;margin-left: 10%;font-size: 26px;color: white;font-weight: bold;font-style: oblique;font-family: Roboto, sans-serif;">Good day '+req.session.auth.username2+'</div></header>';
 	htmltemplate+='<div class="signin"></div>';
 	} 
 	else{
