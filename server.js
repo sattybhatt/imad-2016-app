@@ -296,7 +296,7 @@ function returnc(aid2){
 
 //end here
 //function makecontent
-function makecontent(ob1){
+function makecontent(ob1,req){
     var title=ob1.title;
     var image=ob1.image;
     var content=ob1.content;
