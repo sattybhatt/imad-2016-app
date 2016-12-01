@@ -54,6 +54,7 @@ input{
     margin-left: 10px;
     width: 170px;
     border-radius: 1px;
+    border: none;
 }
 #login{
 	height: 30px;
