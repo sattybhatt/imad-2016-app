@@ -81,7 +81,7 @@ button {
 }
 .lgo+span {font-size: 25px;color: #FFF;margin-left: 10px;font-family: 'Gloria Hallelujah', cursive;}
 .lgin{ display: inline-block;margin-left: 30%; margin-top: 10px;}
-.lgif{width: 240px;margin-left: 40%;margin-top: 200px;padding: 15px;position: absolute;height: 100px;z-index: 900;}
+#lgif{width: 240px;margin-left: 40%;margin-top: 200px;padding: 15px;position: absolute;height: 100px;z-index: 900;}
 svg:hover{
 fill:#4daf4d;
 }
