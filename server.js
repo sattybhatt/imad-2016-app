@@ -265,7 +265,7 @@ function returnc(aid2){
        if(err){
            res.status(500).send(err.toString());
        } else if(result.rows.length===0){
-             res.send('No comment');
+             res.send('');
          }
          else{
               ob2=result.rows;
