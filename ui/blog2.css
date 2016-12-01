@@ -42,7 +42,7 @@ font-size: 25px; font-weight: bold; color: #3e3e3e;
 position: absolute;display: inline;top: 35px; right: 7px;width: 80px;
 }
 .vm{
-position: relative; width:24px; top:13px; display: inline-block;
+position: relative; width:24px; top:13px; display: inline;
 }
 .incenter{
 position: relative; top:50%; left:50%; transform: translate( -50% , -50% );
