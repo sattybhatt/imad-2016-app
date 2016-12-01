@@ -115,5 +115,11 @@ console.log(password);
      lo3.style.display='none'; 
       var lc=document.getElementById('mm');
     lc.style.opacity='1.0';
-  }
+  };
+  //logout
+  var logout=document.getElementById('logout');
+  logout.onclick=function(){
+      
+  };
+ 
     
