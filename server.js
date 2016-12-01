@@ -298,10 +298,14 @@ function returnc(aid2){
 //function makecontent
 function makecontent(ob1,req){
     var title=ob1.title;
+    var username2="";
     var image=ob1.image;
     var content=ob1.content;
     var date=ob1.date;
-    var username2=req.session.auth.username2;
+    if(req.session && req.session.auth && req.session.auth.userid){
+     username2=req.session.auth.username2;
+    }
+    else{username2="Guest"; }
 	var aid=ob1.id;
 	var z=returnc(aid);
 	 global.comm="";
